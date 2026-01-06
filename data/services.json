@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "label": "Data Strategy",
+      "title": "Connect the dots between your business goals and the data that drives them",
+      "description": "Data without direction is just noise. I'll work with your team to tie your metrics to real business outcomes, align stakeholders, and create a roadmap so your data drives action, not confusion.",
+      "image": "assets/images/services/data-strategy.png",
+      "testimonial": {
+        "quote": "Valerie has made a significant contribution to the Nuclear Skills Plan, supporting the translation of <strong>complex data into clear and actionable insights</strong>.",
+        "name": "Lawrence Poxon",
+        "role": "Programme Manager",
+        "company": "Cogent Skills",
+        "photo": "assets/images/testimonials/Lawrence_Poxton_1.png"
+      }
+    },
+    {
+      "id": 2,
+      "label": "Data Solutions",
+      "title": "Get answers fast, and understand why they matter",
+      "description": "Getting answers shouldn't slow your team down. I'll build data solutions, from dashboards to automated pipelines, that cut reporting time from days to minutes so everyone gets the insights they need to act.",
+      "image": "assets/images/services/data-solutions.png",
+      "testimonial": {
+        "quote": "Our organisation now benefits from a <strong>more robust and user-friendly reporting system</strong> in Tableau.",
+        "name": "John Wyldbore",
+        "role": "Head of IT Innovation",
+        "company": "Forterra PLC",
+        "photo": "assets/images/testimonials/John_Wyldbore_3.png"
+      }
+    },
+    {
+      "id": 3,
+      "label": "Sustainable Delivery",
+      "title": "Solutions your team can own long after I'm gone",
+      "description": "I build with handover in mind from day one. Full documentation, clear logic, and a proper handover so you're never held hostage by knowledge that lives in one person's head.",
+      "image": "assets/images/services/sustainable-delivery.png",
+      "testimonial": {
+        "quote": "Throughout our week working together, I <strong>learnt a significant amount</strong> from Valerie.",
+        "name": "Joseph Evans",
+        "role": "1st Team Goalkeeper Analyst",
+        "company": "West Ham United FC",
+        "photo": "assets/images/testimonials/Joseph_Evans_2.png"
+      }
+    }
+  ]
+}

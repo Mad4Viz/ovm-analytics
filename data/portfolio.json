@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "title": "Marketing Spend Analysis",
+    "description": "Channel ROI analysis for D2C nutrition brand. Revealed overspend despite strong revenue growth, signalling to reallocate budget.",
+    "images": ["assets/images/portfolio/marketing-spend-sustainability.png"],
+    "industry": "e-commerce digital-marketing",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "sql", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/MarketingSpendOverviewRAWNutritionConcept/MarketingSpendOverview",
+      "github": "https://github.com/Mad4Viz/Marketing-Spend-Sustainability-Overview"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 2,
+    "title": "Shopify Overview",
+    "description": "Shopify dashboard for D2C nutrition brand. Combined sales data to identify revenue drivers and inform restocking decisions.",
+    "images": ["assets/images/portfolio/shopify-overview.png"],
+    "industry": "e-commerce digital-marketing",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "sql", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/ShopifyOverviewRAWNutritionConcept/ShopifyOverview",
+      "github": "https://github.com/Mad4Viz/Shopify-Overview-Raw-Concept-"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 3,
+    "title": "Marketing SaaS Landing Page",
+    "description": "Campaign performance hub for SaaS marketing. Track campaign progress against targets and compare channel performance at a glance.",
+    "images": ["assets/images/portfolio/landing-page-saas.png"],
+    "industry": "e-commerce digital-marketing",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/DigitalMarketingLandingPage/LandingPage"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 4,
+    "title": "Organic Vs Paid Content",
+    "description": "Campaign analysis comparing organic vs paid performance. Reveal cost efficiency across channels to optimise ad spend.",
+    "images": ["assets/images/portfolio/organic-vs-paid.png"],
+    "industry": "digital-marketing",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/CampaignPerformanceAnalysis_17579201773760/OrganicVsPaidDashboard"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 5,
+    "title": "Mobile Delivery KPI",
+    "description": "Mobile-first delivery tracker for operations teams. Monitor delivery status against targets and spot SLA breaches at a glance.",
+    "images": ["assets/images/portfolio/mobile-delivery-kpi.png"],
+    "industry": "logistics",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/DeliveryPerformance_17551745380910/MobileViewDashboard"
+    },
+    "isMobile": true
+  },
+  {
+    "id": 6,
+    "title": "Winning Writing Templates",
+    "description": "Notion API extraction of a viral lead magnet. Organised writing frameworks so content creators can browse, analyse and apply proven templates.",
+    "images": ["assets/images/portfolio/winning-writing-templates.png"],
+    "industry": "digital-marketing",
+    "category": "visualisation",
+    "projectType": "makeover",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/WinningTemplates/Dashboard",
+      "github": "https://github.com/Mad4Viz/Lara_Winning_Templates/"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 7,
+    "title": "Profit and Loss",
+    "description": "P&L reporting for finance teams. Combines visual overview with detailed matrix, switch views for summary or line item detail.",
+    "images": ["assets/images/portfolio/profit-and-loss-dashboard.png", "assets/images/portfolio/profit-and-loss-matrix.png"],
+    "industry": "finance",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/ProfitandLoss_17509300867090/ProfitandLossDashboard"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 8,
+    "title": "LinkedIn Performance Overview",
+    "description": "LinkedIn analytics for content creators. Track follower demographics and post performance to guide inbound strategy.",
+    "images": ["assets/images/portfolio/linkedin-overview.png"],
+    "industry": "digital-marketing",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/Part1LinkedInPerformanceReviewDashboard/LinkedinDashboard"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 9,
+    "title": "Health and Fitness Overview",
+    "description": "Personal fitness dashboard unifying Garmin, MyFitnessPal, and Apple Health. One view to track trends across nutrition, activity, and recovery.",
+    "images": ["assets/images/portfolio/health-fitness-overview.png"],
+    "industry": "sports",
+    "category": "visualisation",
+    "projectType": "business-dashboard",
+    "tools": ["tableau", "excel", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/HealthandFitnessOverview/OverviewDashboard2#1"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 10,
+    "title": "Match Fixtures & Results",
+    "description": "Match tracker for hockey club. Compare team stats against opponents and plan for upcoming fixtures in one view.",
+    "images": [
+      "assets/images/portfolio/match-fixtures-results-1.png",
+      "assets/images/portfolio/match-fixtures-results-2.png",
+      "assets/images/portfolio/match-fixtures-results-3.png"
+    ],
+    "industry": "sports",
+    "category": "visualisation",
+    "projectType": "makeover",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/HamsteadWestminsterResultsandFixtures/FixturesResults",
+      "github": "https://github.com/Mad4Viz/Hockey_Fixtures_and_Results_2024-2025"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 11,
+    "title": "Fleet Analysis",
+    "description": "SkyTrax top 10 airlines fleet comparison. See how leading carriers invest in aircraft and build their fleets.",
+    "images": ["assets/images/portfolio/fleet-analysis.png"],
+    "industry": "aviation",
+    "category": "visualisation",
+    "projectType": "makeover",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/FleetInformationSkytraxTop10Airlines2024/SkyTraxTop10AirlinesHorizontal",
+      "github": "https://github.com/Mad4Viz/SKYTRAX-Airline-Alliance-and-Fleet-Analysis"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 12,
+    "title": "Deliveroo Hotspots",
+    "description": "Restaurant hotspot map for Deliveroo riders. Visualise store density and opening hours across London to find busy zones by time of day.",
+    "images": [
+      "assets/images/portfolio/deliveroo-hotspots-1.png",
+      "assets/images/portfolio/deliveroo-hotspots-2.png"
+    ],
+    "industry": "logistics",
+    "category": "visualisation",
+    "projectType": "makeover",
+    "tools": ["tableau", "python"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/DeliverooHotspots/DeliverooHotspot",
+      "github": "https://github.com/Mad4Viz/DeliverooHotspot"
+    },
+    "isMobile": false
+  }
+]
