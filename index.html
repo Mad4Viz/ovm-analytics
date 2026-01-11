@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT6SYX93MR"></script>
+    <!-- Google tag (gtag.js) - Dev -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4G6LH6RDJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-BT6SYX93MR');
+      gtag('config', 'G-F4G6LH6RDJ');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO: Title & Description -->
-    <title>Valerie Madojemu | Freelance Data Consultant & BI Expert</title>
+    <title>Valerie Madojemu - Freelance BI Consultant</title>
     <meta name="description" content="Freelance Data Consultant helping UK businesses turn data into decisions. Tableau, Power BI, SQL expertise. 10+ clients across 5 industries.">
 
     <!-- SEO: Open Graph (LinkedIn/Facebook) -->
@@ -31,8 +31,8 @@
     <meta name="twitter:image" content="assets/images/og-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/brand/profile_preview.png">
+    <link rel="apple-touch-icon" href="assets/brand/profile_preview.png">
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,9 +112,9 @@
                 </div>
                 <div class="hero-left">
                     <p class="hero-trust-badge"><span class="badge-title">Freelance Data Consultant</span><span class="badge-sep"> | </span><span class="badge-stats">10+ clients across 5 industries</span></p>
-                    <h1 class="hero-headline">When your goals and metrics align,<br>decisions get easier.</h1>
+                    <h1 class="hero-headline" id="heroHeadline">Data solutions built around the questions you need answered</h1>
                     <div class="hero-subheadline">
-                        <span>No more dashboards nobody uses. No more metrics that miss the point. Data solutions built around your strategy, not just your tools.</span>
+                        <span id="heroSubheadline">Let's build a data strategy based on your business goals</span>
                     </div>
                     <div class="toolstack">
                         <div class="toolstack-icons">
@@ -755,6 +755,21 @@
             .then(response => response.json())
             .then(data => renderServices(data))
             .catch(error => console.error('Error loading services:', error));
+
+        // =========================================
+        // LOAD HERO FROM JSON
+        // =========================================
+        function renderHero(data) {
+            const hero = data.hero;
+            document.getElementById('heroHeadline').textContent = hero.headline;
+            document.getElementById('heroSubheadline').textContent = hero.subheadline;
+        }
+
+        // Load hero on page load
+        fetch('data/hero.json')
+            .then(response => response.json())
+            .then(data => renderHero(data))
+            .catch(error => console.error('Error loading hero:', error));
 
         // =========================================
         // FEATURED PORTFOLIO (from JSON)
