@@ -2013,7 +2013,7 @@ body {
     .nav.nav-open .nav-social {
         display: flex;
         position: absolute;
-        top: calc(64px + 6 * 49px + 32px); /* nav height + 6 links + padding */
+        top: calc(64px + 6 * 58px + 32px); /* nav height + 6 links (58px each) + padding */
         left: 0;
         right: 0;
         background: var(--white);
@@ -2116,7 +2116,7 @@ body {
 
     /* Subtext */
     .hero-subheadline {
-        font-size: 14px;
+        font-size: 16px;
         text-align: left;
         max-width: 100%;
         word-wrap: break-word;
@@ -2288,12 +2288,29 @@ body {
         max-width: 100%;
     }
 
-    /* Hide carousel arrows and expand icon on mobile */
+    /* Hide main section carousel arrows and expand icon on mobile */
     .carousel-arrow {
         display: none;
     }
     .expand-icon {
         display: none;
+    }
+
+    /* Show card-level carousel arrows on mobile (always visible, not hover-dependent) */
+    .carousel-arrow-left,
+    .carousel-arrow-right {
+        opacity: 1;
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        background: var(--dark-teal);
+        color: white;
+    }
+    .carousel-arrow-left {
+        left: 8px;
+    }
+    .carousel-arrow-right {
+        right: 8px;
     }
 
     .portfolio-card-content {
