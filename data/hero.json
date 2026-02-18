@@ -11,10 +11,6 @@
         "text": "Book a Call",
         "action": "calendly"
       },
-      "secondary": {
-        "text": "Hire on Upwork",
-        "url": "https://www.upwork.com/freelancers/~018f6e98cc87da2f61"
-      }
     },
     "fudReducer": "Free 15 minute call. I'll tell you if I'm not the right fit.",
     "heroImage": "assets/images/hero/Hero Image.png",
