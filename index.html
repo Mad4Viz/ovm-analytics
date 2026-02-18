@@ -16,17 +16,17 @@
 
     <!-- SEO: Title & Description -->
     <title>Valerie Madojemu - Freelance BI Consultant</title>
-    <meta name="description" content="Freelance Data Consultant helping UK businesses turn data into decisions. Tableau, Power BI, SQL expertise. 10+ clients across 5 industries.">
+    <meta name="description" content="Freelance BI Consultant helping UK businesses turn data into decisions. Tableau, Power BI, SQL expertise. 10+ clients across 6 industries.">
 
     <!-- SEO: Open Graph (LinkedIn/Facebook) -->
-    <meta property="og:title" content="Valerie Madojemu | Freelance Data Consultant">
+    <meta property="og:title" content="Valerie Madojemu | Freelance BI Consultant">
     <meta property="og:description" content="Data solutions that connect your metrics to business goals. Tableau, Power BI, SQL expertise.">
     <meta property="og:image" content="assets/images/og-image.png">
     <meta property="og:type" content="website">
 
     <!-- SEO: Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Valerie Madojemu | Freelance Data Consultant">
+    <meta name="twitter:title" content="Valerie Madojemu | Freelance BI Consultant">
     <meta name="twitter:description" content="Data solutions that connect your metrics to business goals.">
     <meta name="twitter:image" content="assets/images/og-image.png">
 
@@ -107,14 +107,14 @@
                     </div>
                     <div class="hero-intro-text">
                         <span class="badge-title">FREELANCE DATA CONSULTANT</span>
-                        <span class="badge-stats">10+ clients across 5 industries</span>
+                        <span class="badge-stats">10+ clients across 6 industries</span>
                     </div>
                 </div>
                 <div class="hero-left">
-                    <p class="hero-trust-badge"><span class="badge-title">Freelance Data Consultant</span><span class="badge-sep"> | </span><span class="badge-stats">10+ clients across 5 industries</span></p>
+                    <p class="hero-trust-badge"><span class="badge-title">Freelance BI Consultant</span><span class="badge-sep"> | </span><span class="badge-stats">10+ clients across 6 industries</span></p>
                     <h1 class="hero-headline" id="heroHeadline">Data solutions built around the questions you need answered</h1>
                     <div class="hero-subheadline">
-                        <span id="heroSubheadline">Let's build a data strategy based on your business goals</span>
+                        <span id="heroSubheadline">Let's build a data solution based on your business goals</span>
                     </div>
                     <div class="toolstack">
                         <div class="toolstack-icons">
@@ -128,7 +128,7 @@
                     </div>
                     <div class="cta-row">
                         <a href="javascript:void(0)" class="cta-primary" onclick="openCalendlyModal()">Book a Call</a>
-                        <a href="https://www.upwork.com/freelancers/~018f6e98cc87da2f61" class="cta-secondary" target="_blank" rel="noopener noreferrer">Hire on Upwork</a>
+                        <a href="assets/docs/cv.pdf" class="cta-secondary" target="_blank" rel="noopener noreferrer">View CV</a>
                     </div>
                     <p class="hero-fud">Free 15 minute call. I'll tell you if I'm not the right fit.</p>
                 </div>
@@ -150,6 +150,7 @@
                 <div class="logo-item"><img src="assets/logos/clients/viasat.svg" alt="Viasat"></div>
                 <div class="logo-item"><img src="assets/logos/clients/forterra.svg" alt="Forterra"></div>
                 <div class="logo-item"><img src="assets/logos/clients/skillcorner.svg" alt="SkillCorner"></div>
+                <div class="logo-item"><img src="assets/logos/clients/GoDaddy_logo_2020.svg" alt="GoDaddy"></div>
                 <!-- Duplicate for seamless loop (mobile marquee) -->
                 <div class="logo-item logo-duplicate"><img src="assets/logos/clients/everton.svg" alt="Everton FC"></div>
                 <div class="logo-item logo-duplicate"><img src="assets/logos/clients/westham.svg" alt="West Ham FC"></div>
@@ -157,6 +158,7 @@
                 <div class="logo-item logo-duplicate"><img src="assets/logos/clients/viasat.svg" alt="Viasat"></div>
                 <div class="logo-item logo-duplicate"><img src="assets/logos/clients/forterra.svg" alt="Forterra"></div>
                 <div class="logo-item logo-duplicate"><img src="assets/logos/clients/skillcorner.svg" alt="SkillCorner"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/GoDaddy_logo_2020.svg" alt="GoDaddy"></div>
             </div>
         </div>
 
@@ -225,9 +227,9 @@
             <div class="final-cta-container">
                 <div class="final-cta-content">
                     <p class="final-cta-badge">
-                        <span class="cta-badge-title">Freelance Data Consultant</span>
+                        <span class="cta-badge-title">Freelance BI Consultant</span>
                         <span class="cta-badge-sep"> | </span>
-                        <span class="cta-badge-stats">10+ clients across 5 industries</span>
+                        <span class="cta-badge-stats">10+ clients across 6 industries</span>
                     </p>
                     <h2 class="final-cta-headline">Turn your data into decisions that move the business forward</h2>
                     <p class="final-cta-body">Whether you're swimming in data or still figuring out what to track, let's build a system that connects your metrics to your goals.</p>
@@ -247,7 +249,7 @@
                     </div>
                     <div class="final-cta-buttons">
                         <a href="javascript:void(0)" class="cta-primary" onclick="openCalendlyModal()">Book a Call</a>
-                        <a href="https://www.upwork.com/freelancers/~018f6e98cc87da2f61" class="cta-secondary" target="_blank" rel="noopener noreferrer">Hire on Upwork</a>
+                        <a href="assets/docs/cv.pdf" class="cta-secondary" target="_blank" rel="noopener noreferrer">View CV</a>
                     </div>
                     <p class="final-cta-fud">Free 15 minute call. I'll tell you if I'm not the right fit.</p>
                 </div>
@@ -430,16 +432,64 @@
         })();
 
         // =========================================
-        // LIGHTBOX
+        // LIGHTBOX (with multi-image support)
         // =========================================
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
         function openLightbox(element) {
-            const img = element.querySelector('img');
+            const carouselImages = element.querySelector('.carousel-images');
             const lightboxContent = document.querySelector('.lightbox-content');
-            if (img) {
+
+            if (carouselImages) {
+                currentLightboxImages = JSON.parse(carouselImages.dataset.images);
+                currentLightboxIndex = Array.from(carouselImages.querySelectorAll('img')).findIndex(img => img.classList.contains('active'));
+                renderLightboxWithDots(lightboxContent);
+            } else {
+                const img = element.querySelector('img');
+                currentLightboxImages = [img.src];
+                currentLightboxIndex = 0;
                 lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
             }
+
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function renderLightboxWithDots(lightboxContent) {
+            const hasMultiple = currentLightboxImages.length > 1;
+
+            const arrowsHTML = hasMultiple
+                ? `<button class="lightbox-arrow-left" onclick="lightboxPrev()">&#8249;</button>
+                   <button class="lightbox-arrow-right" onclick="lightboxNext()">&#8250;</button>`
+                : '';
+
+            const dotsHTML = hasMultiple
+                ? `<div class="lightbox-dots">${currentLightboxImages.map((_, i) =>
+                    `<span class="lightbox-dot${i === currentLightboxIndex ? ' active' : ''}" onclick="switchLightboxImage(${i})"></span>`
+                  ).join('')}</div>`
+                : '';
+
+            lightboxContent.innerHTML = `
+                ${arrowsHTML}
+                <img src="${currentLightboxImages[currentLightboxIndex]}" alt="Portfolio image">
+                ${dotsHTML}
+            `;
+        }
+
+        function switchLightboxImage(index) {
+            currentLightboxIndex = index;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxPrev() {
+            currentLightboxIndex = currentLightboxIndex === 0 ? currentLightboxImages.length - 1 : currentLightboxIndex - 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxNext() {
+            currentLightboxIndex = currentLightboxIndex === currentLightboxImages.length - 1 ? 0 : currentLightboxIndex + 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
         }
 
         function closeLightbox() {
@@ -449,6 +499,10 @@
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeLightbox();
+            if (document.getElementById('lightbox').classList.contains('active') && currentLightboxImages.length > 1) {
+                if (e.key === 'ArrowLeft') lightboxPrev();
+                if (e.key === 'ArrowRight') lightboxNext();
+            }
         });
 
         // =========================================
@@ -774,7 +828,7 @@
         // =========================================
         // FEATURED PORTFOLIO (from JSON)
         // =========================================
-        const FEATURED_IDS = [1, 4, 8]; // Marketing Spend, Organic vs Paid, LinkedIn Performance
+        const FEATURED_IDS = [1, 2, 9]; // Hockey Recruitment, Marketing Spend, LinkedIn Performance
 
         function loadFeaturedPortfolio() {
             fetch('data/portfolio.json')
@@ -805,8 +859,23 @@
                 return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>${separator}`;
             }).join('');
 
-            // Build screenshot HTML - EXACT match to portfolio.html
-            const screenshotHTML = `<img src="${project.images[0]}" alt="${project.title}">`;
+            // Build screenshot HTML - EXACT match to portfolio.html (single vs multi-image)
+            const isMultiImage = project.images.length > 1;
+            let screenshotHTML;
+            if (isMultiImage) {
+                screenshotHTML = `
+                    <div class="carousel-images" data-images='${JSON.stringify(project.images)}'>
+                        ${project.images.map((img, i) => `<img src="${img}" alt="${project.title}" class="${i === 0 ? 'active' : ''}">`).join('')}
+                    </div>
+                    <button class="carousel-arrow-left" onclick="event.stopPropagation(); cardCarouselPrev(this)">&#8249;</button>
+                    <button class="carousel-arrow-right" onclick="event.stopPropagation(); cardCarouselNext(this)">&#8250;</button>
+                    <div class="portfolio-dots">
+                        ${project.images.map((_, i) => `<span class="portfolio-dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')}
+                    </div>
+                `;
+            } else {
+                screenshotHTML = `<img src="${project.images[0]}" alt="${project.title}">`;
+            }
 
             return `
                 <div class="portfolio-card" data-industry="${project.industry}" data-category="${project.category}" data-project-type="${project.projectType}">
@@ -826,6 +895,78 @@
 
         // Load featured portfolio on page load
         loadFeaturedPortfolio();
+
+        // =========================================
+        // FEATURED CARD IMAGE CAROUSEL (multi-image)
+        // =========================================
+        document.getElementById('carouselTrack').addEventListener('click', function(e) {
+            if (e.target.classList.contains('portfolio-dot')) {
+                e.stopPropagation();
+                const container = e.target.closest('.portfolio-screenshot');
+                const index = parseInt(e.target.dataset.index);
+                switchCardImage(container, index);
+            }
+        });
+
+        function switchCardImage(container, index) {
+            const images = container.querySelectorAll('.carousel-images img');
+            const dots = container.querySelectorAll('.portfolio-dot');
+            images.forEach((img, i) => img.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
+
+        function cardCarouselPrev(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            switchCardImage(container, currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+        }
+
+        function cardCarouselNext(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            switchCardImage(container, currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+        }
+
+        // =========================================
+        // MOBILE SWIPE GESTURES FOR MULTI-IMAGE CARDS
+        // =========================================
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('carouselTrack').addEventListener('touchstart', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchStartX = e.changedTouches[0].screenX;
+            }
+        }, { passive: true });
+
+        document.getElementById('carouselTrack').addEventListener('touchend', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe(carouselImages.closest('.portfolio-screenshot'));
+            }
+        }, { passive: true });
+
+        function handleSwipe(container) {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                const images = container.querySelectorAll('.carousel-images img');
+                const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+                if (diff > 0) {
+                    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+                    switchCardImage(container, newIndex);
+                } else {
+                    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+                    switchCardImage(container, newIndex);
+                }
+            }
+        }
 
         // Run on page load
         updateCarouselArrows();

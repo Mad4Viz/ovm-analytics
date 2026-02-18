@@ -35,7 +35,7 @@ body {
    =========================================== */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 0;
     background: var(--dark-teal);
     color: var(--white);
@@ -2329,6 +2329,22 @@ body {
 
     .carousel-arrow.right {
         right: 4px;
+    }
+
+    /* Lightbox arrows: move inside on mobile with inverted colours */
+    .lightbox-arrow-left,
+    .lightbox-arrow-right {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        background: var(--dark-teal);
+        color: white;
+    }
+    .lightbox-arrow-left {
+        left: 8px;
+    }
+    .lightbox-arrow-right {
+        right: 8px;
     }
 
     /* ---- TESTIMONIALS: Stack vertically ---- */

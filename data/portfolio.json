@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "Hockey Recruitment Screening",
+    "description": "Recruitment screening tool for hockey clubs. Surface top goal scorers across divisions and seasons to filter, profile and evaluate targets.",
+    "images": [
+      "assets/images/portfolio/Hockey-Screening-1.png",
+      "assets/images/portfolio/Hockey-Screening-2.png",
+      "assets/images/portfolio/Hockey-Screening-3.png"
+    ],
+    "industry": "sports",
+    "category": "analytics-engineering",
+    "projectType": "data-pipeline",
+    "tools": ["tableau", "python", "sql", "dbt", "claude"],
+    "links": {
+      "github": "https://github.com/Mad4Viz/england-hockey-recruitment-screening"
+    },
+    "isMobile": false
+  },
+  {
+    "id": 2,
     "title": "Marketing Spend Analysis",
     "description": "Channel ROI analysis for D2C nutrition brand. Revealed overspend despite strong revenue growth, signalling to reallocate budget.",
     "images": ["assets/images/portfolio/marketing-spend-sustainability.png"],
@@ -15,7 +33,7 @@
     "isMobile": false
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Shopify Overview",
     "description": "Shopify dashboard for D2C nutrition brand. Combined sales data to identify revenue drivers and inform restocking decisions.",
     "images": ["assets/images/portfolio/shopify-overview.png"],
@@ -30,7 +48,7 @@
     "isMobile": false
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Marketing SaaS Landing Page",
     "description": "Campaign performance hub for SaaS marketing. Track campaign progress against targets and compare channel performance at a glance.",
     "images": ["assets/images/portfolio/landing-page-saas.png"],
@@ -44,7 +62,7 @@
     "isMobile": false
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Organic Vs Paid Content",
     "description": "Campaign analysis comparing organic vs paid performance. Reveal cost efficiency across channels to optimise ad spend.",
     "images": ["assets/images/portfolio/organic-vs-paid.png"],
@@ -58,7 +76,7 @@
     "isMobile": false
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Mobile Delivery KPI",
     "description": "Mobile-first delivery tracker for operations teams. Monitor delivery status against targets and spot SLA breaches at a glance.",
     "images": ["assets/images/portfolio/mobile-delivery-kpi.png"],
@@ -72,7 +90,7 @@
     "isMobile": true
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Winning Writing Templates",
     "description": "Notion API extraction of a viral lead magnet. Organised writing frameworks so content creators can browse, analyse and apply proven templates.",
     "images": ["assets/images/portfolio/winning-writing-templates.png"],
@@ -87,7 +105,7 @@
     "isMobile": false
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Profit and Loss",
     "description": "P&L reporting for finance teams. Combines visual overview with detailed matrix, switch views for summary or line item detail.",
     "images": ["assets/images/portfolio/profit-and-loss-dashboard.png", "assets/images/portfolio/profit-and-loss-matrix.png"],
@@ -101,7 +119,7 @@
     "isMobile": false
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "LinkedIn Performance Overview",
     "description": "LinkedIn analytics for content creators. Track follower demographics and post performance to guide inbound strategy.",
     "images": ["assets/images/portfolio/linkedin-overview.png"],
@@ -115,7 +133,7 @@
     "isMobile": false
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Health and Fitness Overview",
     "description": "Personal fitness dashboard unifying Garmin, MyFitnessPal, and Apple Health. One view to track trends across nutrition, activity, and recovery.",
     "images": ["assets/images/portfolio/health-fitness-overview.png"],
@@ -129,7 +147,7 @@
     "isMobile": false
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Match Fixtures & Results",
     "description": "Match tracker for hockey club. Compare team stats against opponents and plan for upcoming fixtures in one view.",
     "images": [
@@ -148,7 +166,7 @@
     "isMobile": false
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Fleet Analysis",
     "description": "SkyTrax top 10 airlines fleet comparison. See how leading carriers invest in aircraft and build their fleets.",
     "images": ["assets/images/portfolio/fleet-analysis.png"],
@@ -163,7 +181,7 @@
     "isMobile": false
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Deliveroo Hotspots",
     "description": "Restaurant hotspot map for Deliveroo riders. Visualise store density and opening hours across London to find busy zones by time of day.",
     "images": [

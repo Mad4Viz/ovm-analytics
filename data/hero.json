@@ -1,20 +1,16 @@
 {
   "hero": {
     "trustBadge": {
-      "title": "Freelance Data Consultant",
-      "stats": "10+ clients across 5 industries"
+      "title": "Freelance BI Consultant",
+      "stats": "10+ clients across 6 industries"
     },
     "headline": "Data solutions built around the questions you need answered",
-    "subheadline": "Let's build a data strategy based on your business goals",
+    "subheadline": "Let's build a data solution based on your business goals",
     "cta": {
       "primary": {
         "text": "Book a Call",
         "action": "calendly"
       },
-      "secondary": {
-        "text": "Hire on Upwork",
-        "url": "https://www.upwork.com/freelancers/~018f6e98cc87da2f61"
-      }
     },
     "fudReducer": "Free 15 minute call. I'll tell you if I'm not the right fit.",
     "heroImage": "assets/images/hero/Hero Image.png",
