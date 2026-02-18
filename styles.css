@@ -2331,14 +2331,14 @@ body {
         right: 4px;
     }
 
-    /* Lightbox arrows: move inside on mobile */
+    /* Lightbox arrows: move inside on mobile with inverted colours */
     .lightbox-arrow-left,
     .lightbox-arrow-right {
         width: 36px;
         height: 36px;
         font-size: 20px;
-        background: rgba(255,255,255,0.9);
-        color: var(--dark-teal);
+        background: var(--dark-teal);
+        color: white;
     }
     .lightbox-arrow-left {
         left: 8px;
