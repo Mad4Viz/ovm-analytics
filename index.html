@@ -432,16 +432,64 @@
         })();
 
         // =========================================
-        // LIGHTBOX
+        // LIGHTBOX (with multi-image support)
         // =========================================
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
         function openLightbox(element) {
-            const img = element.querySelector('img');
+            const carouselImages = element.querySelector('.carousel-images');
             const lightboxContent = document.querySelector('.lightbox-content');
-            if (img) {
+
+            if (carouselImages) {
+                currentLightboxImages = JSON.parse(carouselImages.dataset.images);
+                currentLightboxIndex = Array.from(carouselImages.querySelectorAll('img')).findIndex(img => img.classList.contains('active'));
+                renderLightboxWithDots(lightboxContent);
+            } else {
+                const img = element.querySelector('img');
+                currentLightboxImages = [img.src];
+                currentLightboxIndex = 0;
                 lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
             }
+
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function renderLightboxWithDots(lightboxContent) {
+            const hasMultiple = currentLightboxImages.length > 1;
+
+            const arrowsHTML = hasMultiple
+                ? `<button class="lightbox-arrow-left" onclick="lightboxPrev()">&#8249;</button>
+                   <button class="lightbox-arrow-right" onclick="lightboxNext()">&#8250;</button>`
+                : '';
+
+            const dotsHTML = hasMultiple
+                ? `<div class="lightbox-dots">${currentLightboxImages.map((_, i) =>
+                    `<span class="lightbox-dot${i === currentLightboxIndex ? ' active' : ''}" onclick="switchLightboxImage(${i})"></span>`
+                  ).join('')}</div>`
+                : '';
+
+            lightboxContent.innerHTML = `
+                ${arrowsHTML}
+                <img src="${currentLightboxImages[currentLightboxIndex]}" alt="Portfolio image">
+                ${dotsHTML}
+            `;
+        }
+
+        function switchLightboxImage(index) {
+            currentLightboxIndex = index;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxPrev() {
+            currentLightboxIndex = currentLightboxIndex === 0 ? currentLightboxImages.length - 1 : currentLightboxIndex - 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxNext() {
+            currentLightboxIndex = currentLightboxIndex === currentLightboxImages.length - 1 ? 0 : currentLightboxIndex + 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
         }
 
         function closeLightbox() {
@@ -451,6 +499,10 @@
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeLightbox();
+            if (document.getElementById('lightbox').classList.contains('active') && currentLightboxImages.length > 1) {
+                if (e.key === 'ArrowLeft') lightboxPrev();
+                if (e.key === 'ArrowRight') lightboxNext();
+            }
         });
 
         // =========================================
@@ -875,6 +927,45 @@
             const images = container.querySelectorAll('.carousel-images img');
             const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
             switchCardImage(container, currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+        }
+
+        // =========================================
+        // MOBILE SWIPE GESTURES FOR MULTI-IMAGE CARDS
+        // =========================================
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('carouselTrack').addEventListener('touchstart', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchStartX = e.changedTouches[0].screenX;
+            }
+        }, { passive: true });
+
+        document.getElementById('carouselTrack').addEventListener('touchend', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe(carouselImages.closest('.portfolio-screenshot'));
+            }
+        }, { passive: true });
+
+        function handleSwipe(container) {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                const images = container.querySelectorAll('.carousel-images img');
+                const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+                if (diff > 0) {
+                    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+                    switchCardImage(container, newIndex);
+                } else {
+                    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+                    switchCardImage(container, newIndex);
+                }
+            }
         }
 
         // Run on page load
