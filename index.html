@@ -807,8 +807,23 @@
                 return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>${separator}`;
             }).join('');
 
-            // Build screenshot HTML - EXACT match to portfolio.html
-            const screenshotHTML = `<img src="${project.images[0]}" alt="${project.title}">`;
+            // Build screenshot HTML - EXACT match to portfolio.html (single vs multi-image)
+            const isMultiImage = project.images.length > 1;
+            let screenshotHTML;
+            if (isMultiImage) {
+                screenshotHTML = `
+                    <div class="carousel-images" data-images='${JSON.stringify(project.images)}'>
+                        ${project.images.map((img, i) => `<img src="${img}" alt="${project.title}" class="${i === 0 ? 'active' : ''}">`).join('')}
+                    </div>
+                    <button class="carousel-arrow-left" onclick="event.stopPropagation(); cardCarouselPrev(this)">&#8249;</button>
+                    <button class="carousel-arrow-right" onclick="event.stopPropagation(); cardCarouselNext(this)">&#8250;</button>
+                    <div class="portfolio-dots">
+                        ${project.images.map((_, i) => `<span class="portfolio-dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')}
+                    </div>
+                `;
+            } else {
+                screenshotHTML = `<img src="${project.images[0]}" alt="${project.title}">`;
+            }
 
             return `
                 <div class="portfolio-card" data-industry="${project.industry}" data-category="${project.category}" data-project-type="${project.projectType}">
@@ -828,6 +843,39 @@
 
         // Load featured portfolio on page load
         loadFeaturedPortfolio();
+
+        // =========================================
+        // FEATURED CARD IMAGE CAROUSEL (multi-image)
+        // =========================================
+        document.getElementById('carouselTrack').addEventListener('click', function(e) {
+            if (e.target.classList.contains('portfolio-dot')) {
+                e.stopPropagation();
+                const container = e.target.closest('.portfolio-screenshot');
+                const index = parseInt(e.target.dataset.index);
+                switchCardImage(container, index);
+            }
+        });
+
+        function switchCardImage(container, index) {
+            const images = container.querySelectorAll('.carousel-images img');
+            const dots = container.querySelectorAll('.portfolio-dot');
+            images.forEach((img, i) => img.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
+
+        function cardCarouselPrev(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            switchCardImage(container, currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+        }
+
+        function cardCarouselNext(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            switchCardImage(container, currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+        }
 
         // Run on page load
         updateCarouselArrows();
