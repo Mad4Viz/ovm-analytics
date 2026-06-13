@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- deploy-check: CP3 2026-06-13 -->
-    <!-- Google tag (gtag.js) - Dev -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4G6LH6RDJ"></script>
+    <!-- Google Analytics: Prod on mad4viz.github.io, Dev everywhere else (Netlify staging + local) -->
     <script>
+      var GA_ID = location.hostname === 'mad4viz.github.io' ? 'G-BT6SYX93MR' : 'G-F4G6LH6RDJ';
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){ dataLayer.push(arguments); }
       gtag('js', new Date());
-
-      gtag('config', 'G-F4G6LH6RDJ');
+      gtag('config', GA_ID);
     </script>
 
     <meta charset="UTF-8">
