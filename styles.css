@@ -11,6 +11,21 @@
     --text-primary: #003747;
     --text-muted: #5A6A72;
     --border-light: #E0E0E0;
+    /* Cool-soft scheme (Nextly base + brand deep blue) */
+    --bg-base: #F8FAFC;          /* page + hero off-white */
+    --bg-section-grey: #F1F5F9;  /* testimonials / grey sections */
+    /* Borderless card depth (Nextly-style soft shadows, brand-tinted) */
+    --shadow-card: 0 1px 3px rgba(0,55,71,0.05), 0 8px 24px -8px rgba(0,55,71,0.10);
+    --shadow-soft: 0 1px 3px rgba(0,55,71,0.06);
+    --content-max: 1280px;  /* centred content width; bands stay full-bleed */
+    /* Type scale — Major Third (1.25), 16px base. Best practice: one ratio, no ad-hoc sizes */
+    --fs-display: 48px;   /* hero H1 */
+    --fs-h2: 32px;        /* section titles */
+    --fs-h3: 24px;        /* card / sub titles */
+    --fs-lead: 20px;      /* hero subhead, intros */
+    --fs-body: 16px;      /* paragraphs */
+    --fs-small: 14px;     /* meta, captions */
+    --fs-eyebrow: 13px;   /* uppercase labels */
 }
 
 /* ===========================================
@@ -24,7 +39,7 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--white-smoke);
+    background: var(--bg-base);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
@@ -92,7 +107,7 @@ body {
 
 .dev-controls .control-label {
     color: rgba(255,255,255,0.6);
-    font-size: 10px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -103,7 +118,7 @@ body {
     border: none;
     padding: 6px 12px;
     border-radius: 4px;
-    font-size: 11px;
+    font-size: 13px;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -135,10 +150,10 @@ body {
    PAGE CONTAINER (Seamless - no visible edge)
    =========================================== */
 .page-container {
-    max-width: 1440px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    background: #ffffff;
+    background: var(--bg-base);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -146,11 +161,11 @@ body {
 }
 
 .page-container.width-1200 {
-    max-width: 1200px;
+    max-width: 100%;
 }
 
 .page-container.width-1440 {
-    max-width: 1440px;
+    max-width: 100%;
 }
 
 /* ===========================================
@@ -160,7 +175,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: var(--white);
+    background: var(--bg-base);
     height: 72px;
     display: flex;
     align-items: center;
@@ -201,7 +216,7 @@ body {
 .nav-link {
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     transition: color 0.2s;
 }
@@ -289,7 +304,7 @@ body {
 }
 
 .hero-headline {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-primary);
@@ -297,7 +312,7 @@ body {
 }
 
 .hero-subheadline {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: var(--text-muted);
     margin-bottom: 28px;
@@ -396,7 +411,7 @@ body {
 .social-proof-bar {
     padding: 48px 90px;
     text-align: center;
-    background: var(--white);
+    background: var(--bg-base);
 }
 
 .social-proof-label {
@@ -453,11 +468,11 @@ body {
 .pain-header {
     text-align: center;
     padding: 80px 90px 60px;
-    background: var(--white-smoke);
+    background: var(--bg-base);
 }
 
 .pain-headline {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.3;
@@ -481,7 +496,7 @@ body {
     color: var(--white);
     padding: 16px 32px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     transition: background 0.2s;
@@ -534,7 +549,7 @@ body {
 }
 
 .service-label {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--dark-teal);
     text-transform: uppercase;
@@ -577,14 +592,13 @@ body {
 /* Testimonial Card (embedded in service block) */
 .testimonial-card {
     background: var(--white);
-    border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 24px;
-    box-shadow: 0 4px 16px rgba(0,55,71,0.12);
+    box-shadow: var(--shadow-card);
 }
 
 .testimonial-quote {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-primary);
     line-height: 1.6;
     margin-bottom: 20px;
@@ -605,7 +619,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--dark-teal);
 }
 
@@ -630,7 +644,7 @@ body {
    =========================================== */
 .testimonials-section {
     padding: 48px 90px 80px;
-    background: var(--white-smoke);
+    background: var(--bg-base);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -653,7 +667,7 @@ body {
 }
 
 .testimonials-title {
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 16px;
@@ -661,7 +675,7 @@ body {
 }
 
 .testimonials-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -671,9 +685,9 @@ body {
 .testimonial-card-full {
     flex: 0 0 350px;
     background: var(--white);
-    border: 1px solid var(--border-light);
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: var(--shadow-card);
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -711,7 +725,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--dark-teal);
     flex-shrink: 0;
     object-fit: cover;
@@ -738,7 +752,7 @@ body {
 }
 
 .testimonial-card-quote {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-primary);
     line-height: 1.6;
     margin-bottom: 16px;
@@ -839,7 +853,7 @@ body {
 }
 
 .section-grey {
-    background: var(--white-smoke);
+    background: var(--bg-section-grey);
 }
 
 .section-header {
@@ -848,7 +862,7 @@ body {
 }
 
 .section-label {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--dark-teal);
     text-transform: uppercase;
@@ -857,7 +871,7 @@ body {
 }
 
 .section-title {
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 16px;
@@ -865,7 +879,7 @@ body {
 }
 
 .section-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -881,7 +895,7 @@ body {
 
 .placeholder-block p {
     color: var(--text-muted);
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* Card grid */
@@ -906,7 +920,7 @@ body {
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
@@ -922,7 +936,7 @@ body {
    =========================================== */
 .portfolio-section {
     padding: 80px 90px;
-    background: var(--white-smoke);
+    background: var(--bg-section-grey);
 }
 
 .portfolio-header {
@@ -931,7 +945,7 @@ body {
 }
 
 .portfolio-label {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--dark-teal);
     text-transform: uppercase;
@@ -940,7 +954,7 @@ body {
 }
 
 .portfolio-title {
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 16px;
@@ -948,7 +962,7 @@ body {
 }
 
 .portfolio-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -979,9 +993,9 @@ body {
     min-width: 400px;
     max-width: 400px;
     background: var(--white);
-    border: 1px solid var(--border-light);
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: var(--shadow-card);
     transition: box-shadow 0.2s, transform 0.2s;
     /* Equal height cards in carousel */
     display: flex;
@@ -1002,7 +1016,6 @@ body {
     height: 48px;
     border-radius: 50%;
     background: var(--white);
-    border: 1px solid var(--border-light);
     box-shadow: 0 2px 8px rgba(0,55,71,0.08);
     display: flex;
     align-items: center;
@@ -1163,7 +1176,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
     color: var(--dark-teal);
     cursor: pointer;
     transition: background 0.2s ease;
@@ -1260,7 +1273,7 @@ body {
 }
 
 .portfolio-card-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
@@ -1363,7 +1376,7 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .lightbox-content img {
@@ -1392,7 +1405,7 @@ body {
     color: var(--white);
     padding: 16px 32px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     transition: background 0.2s;
@@ -1406,8 +1419,8 @@ body {
    SECTION 6: FINAL CTA
    =========================================== */
 .final-cta-section {
-    padding: 80px 48px;
-    background: var(--white-smoke);
+    padding: 104px 48px;
+    background: var(--bg-section-grey);
 }
 
 .final-cta-header {
@@ -1416,20 +1429,20 @@ body {
 }
 
 .final-cta-title {
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
 
 .final-cta-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-muted);
 }
 
 .final-cta-container {
     display: flex;
-    gap: 60px;
+    gap: 88px;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
@@ -1451,29 +1464,29 @@ body {
 }
 
 .final-cta-headline {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .final-cta-body {
     font-size: 16px;
     color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .value-checklist {
-    margin-bottom: 28px;
+    margin-bottom: 40px;
 }
 
 .value-checklist-item {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .check-icon {
@@ -1498,7 +1511,7 @@ body {
 }
 
 .value-checklist-item p {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-primary);
     font-weight: 500;
 }
@@ -1506,7 +1519,7 @@ body {
 .final-cta-buttons {
     display: flex;
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .final-cta-fud {
@@ -1521,7 +1534,7 @@ body {
     max-width: 520px;
     background: var(--white);
     border-radius: 12px;
-    padding: 32px;
+    padding: 40px;
     box-shadow: 0 2px 12px rgba(0,55,71,0.08);
 }
 
@@ -1555,7 +1568,7 @@ body {
     padding: 14px 16px;
     border: 1px solid var(--border-light);
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: inherit;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -1647,7 +1660,7 @@ body {
     width: 56px;
     height: 56px;
     background: var(--white);
-    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -1713,7 +1726,7 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     color: #666;
     z-index: 10;
@@ -1757,7 +1770,7 @@ body {
 .page-header {
     text-align: center;
     padding: 60px 48px 40px;
-    background: var(--hero-mint);
+    background: var(--bg-base);
 }
 
 .page-title {
@@ -1768,7 +1781,7 @@ body {
 }
 
 .page-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -1777,7 +1790,7 @@ body {
 /* Filters */
 .filters-section {
     padding: 0 48px 40px;
-    background: var(--hero-mint);
+    background: var(--bg-base);
 }
 
 .filters-container {
@@ -1849,7 +1862,7 @@ body {
 /* Portfolio Grid */
 .portfolio-grid-section {
     padding: 40px 48px 80px;
-    background: var(--white-smoke);
+    background: var(--bg-base);
 }
 
 .portfolio-grid {
@@ -1888,7 +1901,7 @@ body {
     padding: 80px 48px;
     text-align: center;
     min-height: calc(100vh - 200px);
-    background: var(--hero-mint);
+    background: var(--bg-base);
 }
 
 .coming-soon-title {
@@ -1899,7 +1912,7 @@ body {
 }
 
 .coming-soon-text {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-muted);
     max-width: 480px;
 }
@@ -1943,6 +1956,47 @@ body {
 
 .nav-hamburger.active .hamburger-line:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===========================================
+   CONTENT WIDTH (full-bleed bands, centred content)
+   Bands span the full viewport; these wrappers keep
+   content centred at --content-max on desktop. Below
+   1280px they are naturally full-width, so the
+   responsive @media rules below still drive layout.
+   =========================================== */
+.nav-container,
+.hero-container,
+.logos-row,
+#servicesContainer,
+.carousel-wrapper,
+.portfolio-cta-wrapper,
+.connect-section,
+.footer-container,
+.final-cta-container {
+    max-width: var(--content-max);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===========================================
+   TYPOGRAPHY POLISH (best-practice tracking + measure)
+   =========================================== */
+.hero-headline {
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+.portfolio-title,
+.testimonials-title,
+.final-cta-title,
+.final-cta-headline {
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+/* Readable line length on long-form text (45-75 char best practice) */
+.hero-subheadline,
+.final-cta-body {
+    max-width: 60ch;
 }
 
 /* ===========================================
@@ -2084,7 +2138,7 @@ body {
     }
 
     .hero-intro-text .badge-title {
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 600;
         color: var(--text-muted);
         text-transform: uppercase;
@@ -2092,7 +2146,7 @@ body {
     }
 
     .hero-intro-text .badge-stats {
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 600;
         color: var(--text-muted);
         text-transform: uppercase;
@@ -2157,7 +2211,7 @@ body {
     /* FUD buster */
     .hero-fud {
         text-align: left;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     /* ---- PREVENT OVERFLOW ---- */
@@ -2190,7 +2244,7 @@ body {
     }
 
     .service-description {
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
 
@@ -2392,7 +2446,7 @@ body {
     }
 
     .final-cta-title {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .final-cta-container {
@@ -2419,7 +2473,7 @@ body {
     }
 
     .final-cta-fud {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .contact-form-wrapper {
@@ -2430,7 +2484,7 @@ body {
     }
 
     .contact-form-title {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     /* CTA badge - 2 lines on mobile */
@@ -2481,7 +2535,7 @@ body {
         font-size: 32px;
     }
     .page-subtitle {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     /* Filters - stack vertically */
