@@ -10,7 +10,7 @@
       "primary": {
         "text": "Book a Call",
         "action": "calendly"
-      },
+      }
     },
     "fudReducer": "Free 15 minute call. I'll tell you if I'm not the right fit.",
     "heroImage": "assets/images/hero/Hero Image.png",
