@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "type": "guide",
+    "topic": "ux",
+    "tool": "tableau",
+    "title": "UX Design Laws",
+    "description": "8 UX laws every dashboard should follow, with practical tips to make your visualisations clearer, faster to use and more memorable.",
+    "tools": ["tableau"],
+    "images": ["assets/images/resources/UXDesignPrinciples.png"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/UXDesignPrinciples/LandingPage"
+    }
+  },
+  {
+    "id": 2,
+    "type": "guide",
+    "topic": "ui",
+    "tool": "tableau",
+    "title": "UI Design Principles",
+    "description": "8 UI design principles to help you build visualisations that look polished and easier to understand.",
+    "tools": ["tableau"],
+    "images": ["assets/images/resources/UIDesignPrinciples.png"],
+    "links": {
+      "tableau": "https://public.tableau.com/app/profile/valerie.madojemu/viz/UIDesignPrinciples/LandingPage"
+    }
+  }
+]

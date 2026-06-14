@@ -2,26 +2,12 @@
   "services": [
     {
       "id": 1,
-      "label": "Data Strategy",
-      "title": "Connect the dots between your business goals and the data that drives them",
-      "description": "I'll work with your team to tie your metrics to real business outcomes, align stakeholders, and create a roadmap so your data drives action.",
+      "label": "Analytics Engineering",
+      "title": "Build the data foundation that lets your team answer their own questions",
+      "description": "I build the data models, pipelines and semantic layer to fit the solution you need.",
       "image": "assets/images/services/data-strategy.png",
       "testimonial": {
-        "quote": "Valerie has made a significant contribution to the Nuclear Skills Plan, supporting the translation of <strong>complex data into clear and actionable insights</strong>.",
-        "name": "Lawrence Poxon",
-        "role": "Programme Manager",
-        "company": "Cogent Skills",
-        "photo": "assets/images/testimonials/Lawrence_Poxton_1.png"
-      }
-    },
-    {
-      "id": 2,
-      "label": "Data Solutions",
-      "title": "Get answers fast, and understand why they matter",
-      "description": "I'll build data solutions, from dashboards to automated pipelines, that cut reporting time from days to minutes so everyone gets the insights they need to act.",
-      "image": "assets/images/services/data-solutions.png",
-      "testimonial": {
-        "quote": "Our organisation now benefits from a <strong>more robust and user-friendly reporting system</strong> in Tableau.",
+        "quote": "Val demonstrated <strong>exceptional skills</strong> in understanding the intricacies of our existing reports and their code, translating them seamlessly into Tableau.",
         "name": "John Wyldbore",
         "role": "Head of IT Innovation",
         "company": "Forterra PLC",
@@ -29,17 +15,31 @@
       }
     },
     {
+      "id": 2,
+      "label": "BI & Executive Reporting",
+      "title": "Turn your data into insight stakeholders can act on",
+      "description": "I turn your data into decisions, surfacing what changed and why it matters.",
+      "image": "assets/images/services/data-solutions.png",
+      "testimonial": {
+        "quote": "She understood the problem immediately and delivered a solution that <strong>hit the mark</strong>.",
+        "name": "Jake Jackson",
+        "role": "Director",
+        "company": "GainShare Performance",
+        "photo": "assets/images/testimonials/Jake_Jackson_5.jpeg"
+      }
+    },
+    {
       "id": 3,
       "label": "Sustainable Delivery",
-      "title": "Solutions your team can own long after I'm gone",
-      "description": "I build with handover in mind from day one. Full documentation, clear logic, and a proper handover so the knowledge stays with your team, not just with me.",
+      "title": "Scoped with your stakeholders, built to last",
+      "description": "I build around your stakeholders and document everything, so the work stays clear, reliable and easy to maintain.",
       "image": "assets/images/services/sustainable-delivery.png",
       "testimonial": {
-        "quote": "Throughout our week working together, I <strong>learnt a significant amount</strong> from Valerie.",
-        "name": "Joseph Evans",
-        "role": "1st Team Goalkeeper Analyst",
-        "company": "West Ham United FC",
-        "photo": "assets/images/testimonials/Joseph_Evans_2.png"
+        "quote": "She <strong>engages effectively with stakeholders</strong> to understand their specific requirements.",
+        "name": "Lawrence Poxon",
+        "role": "Programme Manager",
+        "company": "Cogent Skills",
+        "photo": "assets/images/testimonials/Lawrence_Poxton_1.png"
       }
     }
   ]

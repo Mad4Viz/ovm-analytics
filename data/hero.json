@@ -2,10 +2,10 @@
   "hero": {
     "trustBadge": {
       "title": "Freelance BI Consultant",
-      "stats": "10+ clients across 6 industries"
+      "stats": "12+ clients across 8 industries"
     },
-    "headline": "Data solutions built around the questions you need answered",
-    "subheadline": "Let's build a data solution based on your business goals",
+    "headline": "Data solutions built around your questions",
+    "subheadline": "Turn your data into answers you can act on.",
     "cta": {
       "primary": {
         "text": "Book a Call",

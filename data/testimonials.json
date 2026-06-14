@@ -32,5 +32,24 @@
       "Not only did Val excel in the technical aspects of the migration, but she also exhibited excellent communication skills. She kept all stakeholders informed and engaged throughout the process, ensuring that everyone was aligned and satisfied with the outcomes.",
       "Thanks to Val's hard work and expertise, our organisation now benefits from a more robust and user-friendly reporting system in Tableau. I highly recommend Val for any data-related projects, as her proficiency and professionalism are truly outstanding."
     ]
+  },
+  {
+    "name": "Jake Jackson",
+    "role": "Director",
+    "company": "GainShare Performance",
+    "photo": "assets/images/testimonials/Jake_Jackson_5.jpeg",
+    "quote": [
+      "Valerie did an excellent job bringing our data visualization concepts to life. Her designs closely followed the brief, elevated our reporting, and her turnaround time was incredibly fast. She understood the problem immediately and delivered a solution that hit the mark. Really appreciate her partnership and execution."
+    ]
+  },
+  {
+    "name": "Edward Graft",
+    "role": "Campaign Manager",
+    "company": "GainShare Performance",
+    "photo": "assets/images/testimonials/Edward_Graft_4.svg",
+    "quote": [
+      "Valerie is an outstanding project partner and domain leader. She stepped up in a significant way, designing and delivering an exceptional series of executive and senior-level dashboards that exceeded expectations.",
+      "Her impressive domain knowledge and solution-oriented approach drove the project forward, producing a design approved on the first pass. Valerie's visualization choices communicated the target insights with clarity and precision."
+    ]
   }
 ]
