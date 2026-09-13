@@ -519,7 +519,7 @@
                 const matchesProjectType = projectTypeFilter === 'all' || projectType === projectTypeFilter;
 
                 if (matchesIndustry && matchesCategory && matchesProjectType) {
-                    card.style.display = 'block';
+                    card.style.display = ''; // ponytail: clear, so the CSS flex layout keeps links aligned
                     visibleCount++;
                 } else {
                     card.style.display = 'none';

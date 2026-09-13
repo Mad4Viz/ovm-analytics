@@ -491,7 +491,7 @@
                 const matchesTool = toolFilter === 'all' || tool === toolFilter;
 
                 if (matchesType && matchesTopic && matchesTool) {
-                    card.style.display = 'block';
+                    card.style.display = ''; // ponytail: clear, so the CSS flex layout keeps links aligned
                     visibleCount++;
                 } else {
                     card.style.display = 'none';
