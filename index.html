@@ -115,7 +115,7 @@
                 </div>
                 <div class="hero-left">
                     <p class="hero-trust-badge"><span class="badge-title">Freelance BI Consultant</span><span class="badge-sep"> | </span><span class="badge-stats">12+ clients across 8 industries</span></p>
-                    <h1 class="hero-headline" id="heroHeadline">Data solutions built around your questions</h1>
+                    <h1 class="hero-headline" id="heroHeadline">Data solutions built around <br class="br-mobile">your questions</h1>
                     <div class="hero-subheadline">
                         <span id="heroSubheadline">Turn your data into answers you can act on.</span>
                     </div>
@@ -818,7 +818,7 @@
         // =========================================
         function renderHero(data) {
             const hero = data.hero;
-            document.getElementById('heroHeadline').textContent = hero.headline;
+            document.getElementById('heroHeadline').innerHTML = hero.headline;
             document.getElementById('heroSubheadline').textContent = hero.subheadline;
         }
 

@@ -2569,3 +2569,7 @@ body {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+/* Line break shown on phones only (hero headline) */
+.br-mobile { display: none; }
+@media (max-width: 767px) { .br-mobile { display: inline; } }
